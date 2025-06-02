@@ -1,6 +1,4 @@
 import React, { useState,useEffect } from 'react';
-import axios from 'axios';
-//import Chat from './components/Chat';
 import InputArea from './InputArea';
 import { useNavigate } from 'react-router-dom';
 import { sendEmail,resetPrompts } from '../apis/EmailApis';
@@ -8,7 +6,6 @@ import { sendEmail,resetPrompts } from '../apis/EmailApis';
 function Home() {
     const navigate=useNavigate();
   const [prompt, setPrompt] = useState('');
-  const [conversation, setConversation] = useState([]);
   const [loading, setLoading] = useState(false);
   const [generatedEmail, setGeneratedEmail] = useState('');
   const [tone, setTone] = useState('Formal');
@@ -27,11 +24,7 @@ function Home() {
 
       const aiReply = { role: 'assistant', content: res.data.email };
       try {
-        setConversation((prev) => {
-          const updated = [...prev,res.data.email];
-          
-          return updated;
-        });
+        
         let emailHistory=JSON.parse(localStorage.getItem('emailHistory') || '[]');
         emailHistory.push(res.data.email);
         localStorage.setItem('emailHistory',JSON.stringify(emailHistory))
@@ -58,7 +51,7 @@ function Home() {
   };
 
   const handleHistory= async()=>{
-    navigate('/history',{ state: { history: conversation }})
+    navigate('/history')
   }
 
   return (
@@ -87,6 +80,5 @@ function Home() {
     </div>
   );
 }
-//<Chat messages={conversation} />
 
 export default Home;
