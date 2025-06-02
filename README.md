@@ -1,12 +1,31 @@
-# React + Vite
+# 📧 Smart Email Generator (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the **frontend** of the Smart Email Generator — a React-based application designed to help users generate professional or casual emails using AI. It was built to practice and apply concepts of **Generative AI**, using **OpenAI's ChatGPT** API at the backend.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ✍️ **Text + Voice Input**  
+  Use either keyboard input or voice commands (powered by the Web Speech API) to provide your email prompt.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🎛️ **Dropdown Selectors**  
+  Choose the email **type** (e.g., Job Application, Thank You, Meeting Request) and **tone** (e.g., Formal, Casual, Polite, Direct) for a more tailored email.
+
+- ♻️ **Email Regeneration Support**  
+  All generated emails are saved locally for easy access and potential reuse.
+
+- 📜 **Email History View**  
+  View all previously generated emails through a dedicated history page, powered by **localStorage** or optionally **MongoDB** (if connected in backend).
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React + Vite
+- **Voice Recognition**: Web Speech API
+- **State Management**: React Hooks
+- **Storage**: localStorage (client-side)
+- **API Integration**: Axios → Backend (Express + OpenAI API)
+
+---
