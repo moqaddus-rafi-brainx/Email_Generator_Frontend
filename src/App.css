@@ -1,0 +1,111 @@
+/*Home*/
+h2{
+  text-align: center;
+  text-decoration: underline;
+}
+
+h3{
+  text-align: center;
+}
+.container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  max-width: 1000px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.history-btn{
+  position: absolute;
+  top:5%;
+  left:103%;
+  width:100px;
+  height:30px
+}
+
+.emailBox {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  margin-bottom: 10px;
+  width:100%;
+}
+
+.emailText {
+  white-space: pre-wrap;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/*Input Area*/
+
+.row{
+  display: 'flex';
+  gap: 10px;
+}
+
+select{
+  padding: 8;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  height: 100%;
+  width: 90%;
+}
+.inputArea {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items:center;
+  margin-top: 10px;
+  margin-bottom:10px;
+  width:100%;
+}
+
+textarea {
+  flex-grow: 1;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  resize: none;
+  border: 1px solid #ccc;
+  width:100%;
+}
+
+.micButton {
+  padding: 10px 12px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.button {
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button:disabled{
+  background-color: #ccc;
+}
+
+.resetBtn {
+  padding: 10px 16px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
